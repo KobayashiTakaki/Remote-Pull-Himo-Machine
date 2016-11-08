@@ -12,8 +12,6 @@ void setup() {
 }
 
 void loop() {
-  //Serial.println(digitalRead(pinIR));
-  
   while(digitalRead(pinIR) == HIGH){
   }
   Serial.print("HIGH :");
