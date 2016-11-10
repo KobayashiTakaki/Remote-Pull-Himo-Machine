@@ -10,11 +10,11 @@ void setup() {
 void loop() {
   timeSt = micros();
   while(digitalRead(pinIR) == HIGH){}
-  Serial.print("HIGH :");
+  Serial.print("HIGH: ");
   Serial.println(micros() - timeSt);
 
   timeSt = micros();  
   while(digitalRead(pinIR) == LOW){}
-  Serial.print("LOW :");
+  Serial.print("LOW: ");
   Serial.println(micros() - timeSt);
 }
