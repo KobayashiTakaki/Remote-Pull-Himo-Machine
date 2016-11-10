@@ -8,12 +8,12 @@ void setup() {
 }
 
 void loop() {
-  timeS = micros();
+  timeSt = micros();
   while(digitalRead(pinIR) == HIGH){}
   Serial.print("HIGH :");
   Serial.println(micros() - timeSt);
 
-  timeS = micros();  
+  timeSt = micros();  
   while(digitalRead(pinIR) == LOW){}
   Serial.print("LOW :");
   Serial.println(micros() - timeSt);
