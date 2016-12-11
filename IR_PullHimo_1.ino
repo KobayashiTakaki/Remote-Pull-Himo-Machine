@@ -63,7 +63,7 @@ void loop(){
     }
   }
   
-  //諸々の変数をリセットする
+  //もろもろの変数をリセットする
   timeWakeup = 0;
   timeSt = 0;
   timeCnt = 0;
