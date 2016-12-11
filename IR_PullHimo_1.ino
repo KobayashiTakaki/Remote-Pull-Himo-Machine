@@ -47,9 +47,9 @@ void loop(){
         } else if (500 < timeCnt && timeCnt < 7000) {
           flagB += 1; //500マイクロ秒より長くて7000マイクロ秒より短かかったらflagBを増やす
         } else {
-          flagA = 0;
+          flagA = 0; //条件に合わない長さ(500マイクロ秒以下)だったら、flagはリセットして、whileループを抜ける
           flagB = 0;
-          break; //500マイクロ秒以下だったら、flagはリセットして、whileループを抜ける
+          break;
         }
       }
     
