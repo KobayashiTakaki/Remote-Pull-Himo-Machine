@@ -42,7 +42,7 @@ void loop(){
         Serial.print("timeCnt:");
         Serial.println(timeCnt); //LOWになっていた時間を表示する
         
-        if (timeCnt > 7000) {
+        if (7000 < timeCnt) {
           flagA += 1; //7000マイクロ秒より長かったらflagAを増やす
         } else if (500 < timeCnt && timeCnt < 7000) {
           flagB += 1; //500マイクロ秒より長くて7000マイクロ秒より短かかったらflagBを増やす
