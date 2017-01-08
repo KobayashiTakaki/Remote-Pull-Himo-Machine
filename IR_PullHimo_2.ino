@@ -75,7 +75,6 @@ void loop(){
       }
       
       timeCnt = 0;
-      
     }
   
     if(flagB > 5 && flagA > 0){ //flagAとflagBが一定回数以上になったら
@@ -97,6 +96,6 @@ void loop(){
   //ここまで来ちゃったらスリープする
   Serial.println("sleep");
   Serial.flush();
-  interrupts();
-  sleep_mode();
+  interrupts(); //割り込みを有効にする
+  sleep_mode(); //スリープする
 }
