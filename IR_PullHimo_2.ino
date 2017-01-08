@@ -9,8 +9,8 @@ int pinInt = 2; //割り込み用のピン番号
 int pinIR = 4; //赤外線受信モジュールの信号を読み取るピン番号
 int pinSv = 3; //サーボモーターに信号を送るピン番号
 int pinLed = 6; //LED光らせるピン番号
-int flagA = 0; //7000マイクロ秒より長い赤外線を受信したことを記録しておく変数
-int flagB = 0; //500マイクロ秒より長くて7000マイクロ秒より短い赤外線を受信したことを記録しておく変数
+int flagA = 0; //5000マイクロ秒より長い赤外線を受信したことを記録しておく変数
+int flagB = 0; //500マイクロ秒より長くて5000マイクロ秒より短い赤外線を受信したことを記録しておく変数
 
 //サーボモーターを動かす関数
 void pullHimo(){
@@ -42,7 +42,7 @@ void setup(){
   pinMode(pinSv, OUTPUT);
   pinMode(pinLed, OUTPUT);
   Serial.begin(9600);
-  attachInterrupt(0, wakeup, FALLING); //割り込み番号0(2番ピン)、復帰時にはwakeup()を実行、ピン電圧がFALLING(HIGH→LOW)の時割り込み
+  attachInterrupt(0, wakeup, FALLING); //割り込み番号0(2番ピン)、復帰時にはwakeup()を実行、ピン電圧がFALLING(HIGH→LOW)の時割り込み発生
   pinMode(pinInt, INPUT_PULLUP); //割り込み用ピンをプルアップに設定
   set_sleep_mode(SLEEP_MODE_PWR_DOWN); //スリープモードを設定
 }
